@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import LazyLoad from '../components/Lazy-load';
 import Result from '../components/Result';
 
-const Dashboard = lazy(() => import('./Dashboard'));
+const Home = lazy(() => import('./Home'));
 
 const Routes: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Routes: React.FC = () => {
       }
     >
       <Switch>
-        <Route path='/dashboard' component={Dashboard} />
+        <Route path='/home' component={Home} />
         <Route
           path='/not-found'
           component={() => (
@@ -23,10 +23,11 @@ const Routes: React.FC = () => {
               status='404'
               title='Not Found'
               subTitle='Page does not exists!'
+              screenHeight
             />
           )}
         />
-        <Redirect from='/' exact to='/dashboard' />
+        <Redirect from='/' exact to='/home' />
         <Redirect to='/not-found' />
       </Switch>
     </Suspense>
