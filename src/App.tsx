@@ -4,7 +4,7 @@ import Pages from './pages';
 function App() {
   return (
     <Switch>
-      <Route path='/form' component={Pages} />
+      <Route path='/' component={Pages} />
     </Switch>
   );
 }

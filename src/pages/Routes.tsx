@@ -9,9 +9,9 @@ const Routes: React.FC = () => {
   return (
     <Suspense fallback={<LazyLoad fullHeight />}>
       <Switch>
-        <Route path='/form/dashboard' component={Dashboard} />
+        <Route path='/dashboard' component={Dashboard} />
         <Route
-          path='/form/not-found'
+          path='/not-found'
           component={() => (
             <Result
               status='404'
@@ -20,8 +20,8 @@ const Routes: React.FC = () => {
             />
           )}
         />
-        <Redirect from='/form' exact to='/form/dashboard' />
-        <Redirect to='/form/not-found' />
+        <Redirect from='/' exact to='/dashboard' />
+        <Redirect to='/not-found' />
       </Switch>
     </Suspense>
   );
