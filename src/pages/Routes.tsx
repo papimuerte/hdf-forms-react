@@ -7,7 +7,13 @@ const Dashboard = lazy(() => import('./Dashboard'));
 
 const Routes: React.FC = () => {
   return (
-    <Suspense fallback={<LazyLoad fullHeight />}>
+    <Suspense
+      fallback={
+        <div className='h-screen'>
+          <LazyLoad fullHeight />
+        </div>
+      }
+    >
       <Switch>
         <Route path='/dashboard' component={Dashboard} />
         <Route
