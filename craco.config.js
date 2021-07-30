@@ -9,7 +9,7 @@ module.exports = {
           lessOptions: {
             modifyVars: {
               '@primary-color': '#f99d3a',
-              'border-radius-base': '4px',
+              'border-radius-base': '6px',
             },
             javascriptEnabled: true,
           },

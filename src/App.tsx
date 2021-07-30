@@ -1,5 +1,12 @@
+import { Route, Switch } from 'react-router-dom';
+import Pages from './pages';
+
 function App() {
-  return <div className='flex items-center h-screen justify-center'>x</div>;
+  return (
+    <Switch>
+      <Route path='/form' component={Pages} />
+    </Switch>
+  );
 }
 
 export default App;
