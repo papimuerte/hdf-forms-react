@@ -4,7 +4,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className='flex flex-col items-center justify-center h-screen gap-y-40'>
       <div>KMC LOGO</div>
-      <div className='grid gap-28 md:grid-cols-3'></div>
+      <div className='grid gap-28 md:grid-cols-3'>
         <Button
           className='w-40 font-bold transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'
           type='primary'
